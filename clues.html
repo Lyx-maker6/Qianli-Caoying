@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>运河线索 - 千里漕影</title>
+    <link rel="stylesheet" href="./css/clues.css">
+    <link rel="stylesheet" href="./css/music.css">
+</head>
+<body class="clues-page">
+
+<audio id="bgm" src="./audio/clues.mp3" loop></audio>
+<div class="music-btn playing" id="musicBtn">♫</div>
+
+
+<!-- 顶部导航栏 -->
+<div class="header">
+    <div class="container nav">
+        <div class="logo">千里漕影</div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="story.html">剧情背景</a></li>
+            <li><a href="roles.html">人物角色</a></li>
+            <li><a href="clues.html">运河线索</a></li>
+            <li><a href="learn.html">汉语任务</a></li>
+            <li><a href="book.html">预约体验</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 页面封面 -->
+<div class="clues-hero">
+    <div class="clues-hero-mask">
+        <div class="container clues-hero-content">
+            <h1>运河线索地图</h1>
+            <p>沿着运河旧路，寻找漕银失踪背后的真相。</p>
+            <a href="#mapArea" class="hero-btn">开始调查</a>
+        </div>
+    </div>
+</div>
+
+<!-- 案件进度 -->
+<div class="section progress-section">
+    <div class="container">
+        <h2 class="section-title">案件进度</h2>
+
+        <div class="progress-box">
+            <div class="progress-item active">
+                <span>1</span>
+                <p>收到密信</p>
+            </div>
+
+            <div class="progress-line active"></div>
+
+            <div class="progress-item active">
+                <span>2</span>
+                <p>选择身份</p>
+            </div>
+
+            <div class="progress-line active"></div>
+
+            <div class="progress-item current">
+                <span>3</span>
+                <p>搜集线索</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-item">
+                <span>4</span>
+                <p>完成任务</p>
+            </div>
+        </div>
+
+        <p class="progress-tip">
+            当前任务：点击地图地点与下方线索卡片，收集四条关键证据。
+        </p>
+    </div>
+</div>
+
+<!-- 地图探索区 -->
+<div class="section map-section" id="mapArea">
+    <div class="container">
+        <h2 class="section-title light-title">探秘路线</h2>
+
+        <div class="map-wrap">
+            <img src="./images/clues/map.png" alt="运河线索地图" class="map-img">
+
+            <button class="map-point point-guangyue"
+                    data-title="光岳楼"
+                    data-img="./images/clues/光岳楼3.jpeg"
+                    data-text="光岳楼是密信出现的起点。传闻案发当夜，有人在楼下留下了一封写有暗号的密信。">
+                光岳楼
+            </button>
+
+            <button class="map-point point-shanshan"
+                    data-title="山陕会馆"
+                    data-img="./images/clues/山陕会馆.jpg"
+                    data-text="山陕会馆是商帮往来的重要场所。账册中的异常数字，可能与这里的商帮交易有关。">
+                山陕会馆
+            </button>
+
+            <button class="map-point point-canal"
+                    data-title="聊城运河"
+                    data-img="./images/clues/运河.jpeg"
+                    data-text="聊城运河连接南北商贸，是漕运货物往来的主要通道。隐藏路线也许就藏在河道转运记录中。">
+                聊城运河
+            </button>
+
+            <button class="map-point point-linqing"
+                    data-title="临清钞关"
+                    data-img="./images/clues/临清1.png"
+                    data-text="临清钞关负责税银核验。印章是真，账目却有差异，说明问题可能出在转运环节。">
+                临清钞关
+            </button>
+
+            <button class="map-point point-teahouse"
+                    data-title="茶馆旧巷"
+                    data-img="./images/clues/茶馆.png"
+                    data-text="茶馆旧巷中人来人往，是交换消息的地方。掌柜曾听见有人提到“东南角”三个字。">
+                茶馆旧巷
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- 线索卡片区 -->
+<div class="section clue-section">
+    <div class="container">
+        <h2 class="section-title">关键线索</h2>
+
+        <div class="clue-card-box">
+
+            <div class="clue-card" data-clue="letter">
+                <div class="clue-img">
+                    <img src="./images/clues/clue/clue_secret_letter.jpg" alt="密信碎片">
+                </div>
+                <div class="clue-content">
+                    <h3>密信碎片</h3>
+                    <p>密信藏于书案东南角，似乎指向下一处地点。</p>
+                    <span>点击查看</span>
+                </div>
+            </div>
+
+            <div class="clue-card" data-clue="account">
+                <div class="clue-img">
+                    <img src="./images/clues/clue/account_book_page.jpg" alt="漕运账册">
+                </div>
+                <div class="clue-content">
+                    <h3>漕运账册</h3>
+                    <p>临清与聊城的粮食数量出现明显差异。</p>
+                    <span>点击查看</span>
+                </div>
+            </div>
+
+            <div class="clue-card" data-clue="seal">
+                <div class="clue-img">
+                    <img src="./images/clues/clue/clue_seal_record.jpg" alt="钞关印章">
+                </div>
+                <div class="clue-content">
+                    <h3>钞关印章</h3>
+                    <p>红印之处另有暗码，印章可能并非伪造。</p>
+                    <span>点击查看</span>
+                </div>
+            </div>
+
+            <div class="clue-card" data-clue="route">
+                <div class="clue-img">
+                    <img src="./images/clues/clue/clue_canal_route.jpg" alt="漕运路线">
+                </div>
+                <div class="clue-content">
+                    <h3>漕运路线</h3>
+                    <p>沿水路寻找下一处线索，路线中出现异常转折。</p>
+                    <span>点击查看</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 线索汇总区 -->
+<div class="section summary-section">
+    <div class="container summary-box">
+        <div class="summary-text">
+            <h2>线索汇总</h2>
+            <p>
+                当密信、账本、印章与路线四条线索被串联起来后，案件真相逐渐清晰：
+                漕银失踪并不是单一地点造成的，而是多个转运节点共同隐藏了关键证据。
+            </p>
+            <p class="unlock-text" id="unlockText">
+                当前尚未完成全部线索查看，请继续调查。
+            </p>
+        </div>
+
+        <div class="summary-img">
+            <img src="./images/clues/clue/old_map_red_string.jpg" alt="线索地图">
+        </div>
+    </div>
+</div>
+
+<!-- 底部跳转 -->
+<div class="clues-next">
+    <div class="container">
+        <h2>线索收集完成后，即可进入汉语任务。</h2>
+        <a href="roles.html" class="next-line">返回人物角色</a>
+        <a href="learn.html" id="nextBtn" class="disabled">进入汉语任务</a>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<div class="footer">
+    <p>《聊城拾遗：千里漕影》Web课程设计作品</p>
+    <p>3班 2024405943 卢昱萱</p>
+</div>
+
+<!-- 弹窗 -->
+<div class="clue-modal" id="clueModal">
+    <div class="clue-modal-box">
+        <span class="clue-close" id="clueClose">×</span>
+
+        <div class="modal-img">
+            <img src="" alt="线索图片" id="modalImg">
+        </div>
+
+        <div class="modal-text">
+            <h2 id="modalTitle">线索标题</h2>
+            <p id="modalDesc">线索说明</p>
+            <p class="modal-task" id="modalTask">任务提示</p>
+        </div>
+    </div>
+</div>
+
+<script src="./js/clues.js"></script>
+<script src="./js/music.js"></script>
+</body>
+</html>

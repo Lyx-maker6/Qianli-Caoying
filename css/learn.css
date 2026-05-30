@@ -1,0 +1,494 @@
+/* ================= learn.html 独立完整样式表 ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* 不使用流式布局 */
+html,body{
+    min-width:1200px;
+}
+
+body{
+    font-family:"微软雅黑", Arial, sans-serif;
+    color:#2b211b;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul,li{
+    list-style:none;
+}
+
+.learn-page{
+    background:
+            linear-gradient(rgba(20,14,10,0.68), rgba(20,14,10,0.78)),
+            url("../images/learn/bbg2.jpg") no-repeat center top fixed;
+    background-size:cover;
+}
+
+.container{
+    width:1100px;
+    margin:0 auto;
+}
+
+/* ================= 顶部导航栏 ================= */
+
+.header{
+    width:100%;
+    height:70px;
+    background:rgba(20,15,12,0.96);
+    border-bottom:1px solid #8b1e1e;
+    position:relative;
+    z-index:20;
+}
+
+.nav{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#d8b26e;
+    letter-spacing:4px;
+}
+
+.nav ul{
+    display:flex;
+}
+
+.nav ul li{
+    margin-left:35px;
+}
+
+.nav ul li a{
+    font-size:16px;
+    color:#f5ead6;
+}
+
+.nav ul li a:hover{
+    color:#d8b26e;
+}
+
+/* ================= 通用区域 ================= */
+
+.section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:45px;
+    color:#8b1e1e;
+    letter-spacing:4px;
+}
+
+.light-title{
+    color:#d8b26e;
+}
+
+/* ================= 顶部封面 ================= */
+
+.learn-hero{
+    height:460px;
+    background:
+            linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.72)),
+            url("../images/learn/task_intro_bg.jpg") no-repeat center center;
+    background-size:cover;
+}
+
+.hero-mask{
+    height:460px;
+    background:rgba(0,0,0,0.38);
+}
+
+.hero-content{
+    text-align:center;
+    padding-top:130px;
+}
+
+.hero-content h1{
+    font-size:68px;
+    color:#fff;
+    letter-spacing:8px;
+    text-shadow:5px 5px 14px #000;
+}
+
+.hero-content p{
+    margin-top:24px;
+    font-size:22px;
+    color:#d8b26e;
+}
+
+.hero-btn{
+    display:inline-block;
+    width:150px;
+    height:48px;
+    line-height:48px;
+    margin-top:36px;
+    background:#8b1e1e;
+    color:#fff;
+    border-radius:4px;
+    font-size:16px;
+}
+
+.hero-btn:hover{
+    background:#a62a2a;
+}
+
+/* ================= 任务说明 ================= */
+
+.intro-section{
+    background:
+            linear-gradient(rgba(245,234,214,0.84), rgba(245,234,214,0.84)),
+            url("../images/learn/bg.jpg") no-repeat center center;
+    background-size:cover;
+}
+
+.intro-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.intro-text{
+    width:650px;
+}
+
+.intro-text h2{
+    font-size:38px;
+    color:#8b1e1e;
+    margin-bottom:24px;
+    letter-spacing:4px;
+}
+
+.intro-text p{
+    font-size:18px;
+    line-height:36px;
+    text-indent:2em;
+    color:#2b211b;
+}
+
+.intro-card{
+    width:360px;
+    min-height:190px;
+    padding:35px 30px;
+    background:rgba(255,255,255,0.72);
+    border:1px solid rgba(139,30,30,0.45);
+    box-shadow:0 8px 24px rgba(0,0,0,0.18);
+}
+
+.intro-card h3{
+    font-size:28px;
+    color:#8b1e1e;
+    margin-bottom:18px;
+}
+
+.intro-card p{
+    font-size:17px;
+    line-height:32px;
+}
+
+/* ================= 任务进度 ================= */
+
+.progress-section{
+    background:rgba(245,234,214,0.82);
+}
+
+.progress-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.progress-item{
+    width:120px;
+    text-align:center;
+}
+
+.progress-item span{
+    display:block;
+    width:46px;
+    height:46px;
+    line-height:46px;
+    margin:0 auto 12px;
+    border-radius:50%;
+    background:#b9a98a;
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.progress-item p{
+    font-size:16px;
+    color:#3b2d24;
+}
+
+.progress-item.done span{
+    background:#8b1e1e;
+    box-shadow:0 0 15px rgba(139,30,30,0.65);
+}
+
+.progress-line{
+    width:130px;
+    height:3px;
+    background:#b9a98a;
+    margin:0 8px 30px;
+}
+
+.progress-tip{
+    text-align:center;
+    font-size:18px;
+    color:#2b211b;
+}
+
+/* ================= 任务卡片区 ================= */
+
+.task-section{
+    background:
+            linear-gradient(rgba(0,0,0,0.66), rgba(0,0,0,0.76)),
+            url("../images/learn/bbg2.jpg") no-repeat center center;
+    background-size:cover;
+}
+
+.task-list{
+    display:flex;
+    flex-direction:column;
+    gap:55px;
+}
+
+.task-card{
+    width:1100px;
+    min-height:430px;
+    display:flex;
+    background:rgba(245,234,214,0.90);
+    border:2px solid rgba(139,30,30,0.55);
+    box-shadow:0 12px 35px rgba(0,0,0,0.45);
+}
+
+.reverse-card{
+    flex-direction:row-reverse;
+}
+
+.task-img{
+    width:480px;
+    height:430px;
+    padding:18px;
+    background:rgba(255,255,255,0.42);
+}
+
+.task-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    display:block;
+    box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
+
+.task-content{
+    width:620px;
+    padding:45px 50px;
+}
+
+.task-tag{
+    display:inline-block;
+    padding:8px 18px;
+    background:#8b1e1e;
+    color:#fff;
+    font-size:15px;
+    border-radius:18px;
+    margin-bottom:18px;
+}
+
+.task-content h3{
+    font-size:34px;
+    color:#8b1e1e;
+    margin-bottom:16px;
+}
+
+.task-content > p{
+    font-size:17px;
+    line-height:30px;
+    margin-bottom:24px;
+}
+
+.question-box{
+    background:rgba(255,255,255,0.60);
+    border-left:5px solid #8b1e1e;
+    padding:22px 24px;
+    margin-bottom:22px;
+}
+
+.question{
+    font-size:18px;
+    font-weight:bold;
+    color:#3b2d24;
+    margin-bottom:15px;
+}
+
+.question-box label{
+    display:block;
+    font-size:16px;
+    line-height:32px;
+    cursor:pointer;
+}
+
+.question-box input{
+    margin-right:8px;
+}
+
+.question-box select{
+    width:180px;
+    height:38px;
+    font-size:16px;
+    border:1px solid #8b1e1e;
+    background:#fff;
+    padding-left:10px;
+}
+
+.check-btn{
+    width:130px;
+    height:42px;
+    border:none;
+    background:#8b1e1e;
+    color:#fff;
+    font-size:16px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.check-btn:hover{
+    background:#a62a2a;
+}
+
+.result-text{
+    display:inline-block;
+    margin-left:18px;
+    font-size:17px;
+    font-weight:bold;
+}
+
+.result-correct{
+    color:#8b1e1e;
+}
+
+.result-wrong{
+    color:#333;
+}
+
+/* ================= 完成总结 ================= */
+
+.finish-section{
+    background:
+            linear-gradient(rgba(245,234,214,0.86), rgba(245,234,214,0.86)),
+            url("../images/learn/task_intro_bg.jpg") no-repeat center center;
+    background-size:cover;
+}
+
+.finish-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.finish-box h2{
+    font-size:38px;
+    color:#8b1e1e;
+    margin-bottom:22px;
+}
+
+.finish-box p{
+    width:720px;
+    font-size:18px;
+    line-height:36px;
+}
+
+.stamp-box{
+    width:150px;
+    height:150px;
+    border:8px solid #8b1e1e;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#8b1e1e;
+    font-size:26px;
+    font-weight:bold;
+    transform:rotate(-12deg);
+    opacity:0.55;
+}
+
+.stamp-box.done{
+    opacity:1;
+    box-shadow:0 0 25px rgba(139,30,30,0.45);
+}
+
+/* ================= 底部跳转 ================= */
+
+.learn-next{
+    padding:70px 0;
+    background:
+            linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
+            url("../images/learn/task_route_map.jpg") no-repeat center center;
+    background-size:cover;
+    text-align:center;
+}
+
+.learn-next h2{
+    font-size:30px;
+    color:#d8b26e;
+    margin-bottom:35px;
+}
+
+.learn-next a{
+    display:inline-block;
+    width:160px;
+    height:48px;
+    line-height:48px;
+    margin:0 12px;
+    background:#8b1e1e;
+    color:#fff;
+    font-size:16px;
+    border-radius:4px;
+}
+
+.learn-next a:hover{
+    background:#a62a2a;
+}
+
+.learn-next .next-line{
+    background:transparent;
+    border:1px solid #d8b26e;
+    color:#d8b26e;
+}
+
+.learn-next .disabled{
+    background:#777;
+    color:#ddd;
+    cursor:not-allowed;
+    pointer-events:none;
+}
+
+/* ================= 页脚 ================= */
+
+.footer{
+    height:100px;
+    background:#120f0d;
+    color:#d8b26e;
+    text-align:center;
+    padding-top:25px;
+    line-height:28px;
+    border-top:1px solid #8b1e1e;
+}

@@ -1,0 +1,552 @@
+/* ================= booking.html 独立完整样式表 ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    min-width:1200px;
+}
+
+body{
+    font-family:"微软雅黑", Arial, sans-serif;
+    color:#2b211b;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul,li{
+    list-style:none;
+}
+
+.book-page{
+    background:
+            linear-gradient(rgba(20,14,10,0.72), rgba(20,14,10,0.82)),
+            url("../images/book/bg.jpg") no-repeat center top fixed;
+    background-size:cover;
+}
+
+.container{
+    width:1100px;
+    margin:0 auto;
+}
+
+/* ================= 顶部导航栏 ================= */
+
+.header{
+    width:100%;
+    height:70px;
+    background:rgba(20,15,12,0.96);
+    border-bottom:1px solid #8b1e1e;
+    position:relative;
+    z-index:20;
+}
+
+.nav{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#d8b26e;
+    letter-spacing:4px;
+}
+
+.nav ul{
+    display:flex;
+}
+
+.nav ul li{
+    margin-left:35px;
+}
+
+.nav ul li a{
+    font-size:16px;
+    color:#f5ead6;
+}
+
+.nav ul li a:hover{
+    color:#d8b26e;
+}
+
+/* ================= 通用区域 ================= */
+
+.section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:45px;
+    color:#8b1e1e;
+    letter-spacing:4px;
+}
+
+/* ================= 顶部封面 ================= */
+
+.book-hero{
+    height:460px;
+    background:
+            linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.72)),
+            url("../images/book/pic2.jpg") no-repeat center center;
+    background-size:cover;
+}
+
+.book-hero-mask{
+    height:460px;
+    background:rgba(0,0,0,0.35);
+}
+
+.book-hero-content{
+    text-align:center;
+    padding-top:130px;
+}
+
+.book-hero-content h1{
+    font-size:68px;
+    color:#fff;
+    letter-spacing:8px;
+    text-shadow:5px 5px 14px #000;
+}
+
+.book-hero-content p{
+    margin-top:24px;
+    font-size:22px;
+    color:#d8b26e;
+}
+
+.hero-btn{
+    display:inline-block;
+    width:150px;
+    height:48px;
+    line-height:48px;
+    margin-top:36px;
+    background:#8b1e1e;
+    color:#fff;
+    border-radius:4px;
+    font-size:16px;
+}
+
+.hero-btn:hover{
+    background:#a62a2a;
+}
+
+/* ================= 体验导览 ================= */
+
+.guide-section{
+    background:
+            linear-gradient(rgba(245,234,214,0.86), rgba(245,234,214,0.86)),
+            url("../images/book/bg1.jpg") no-repeat center center;
+    background-size:cover;
+}
+
+.guide-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.guide-poster{
+    width:360px;
+    height:500px;
+    padding:12px;
+    background:#f5ead6;
+    border:2px solid rgba(139,30,30,0.65);
+    box-shadow:0 12px 35px rgba(0,0,0,0.35);
+    transform:rotate(-2deg);
+}
+
+.guide-poster img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.guide-text{
+    width:670px;
+}
+
+.guide-text h2{
+    font-size:42px;
+    color:#8b1e1e;
+    margin-bottom:28px;
+    letter-spacing:4px;
+}
+
+.guide-text p{
+    font-size:19px;
+    line-height:38px;
+    text-indent:2em;
+}
+
+.guide-tags{
+    margin-top:35px;
+}
+
+.guide-tags span{
+    display:inline-block;
+    padding:10px 20px;
+    margin-right:15px;
+    margin-bottom:12px;
+    background:#8b1e1e;
+    color:#fff;
+    border-radius:22px;
+    font-size:16px;
+}
+
+/* ================= 课程亮点 ================= */
+
+.feature-section{
+    background:rgba(20,14,10,0.86);
+}
+
+.feature-section .section-title{
+    color:#d8b26e;
+}
+
+.feature-box{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.feature-card{
+    width:250px;
+    min-height:210px;
+    padding:34px 26px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(216,178,110,0.45);
+    color:#f5ead6;
+    text-align:center;
+    transition:all 0.35s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+    background:rgba(139,30,30,0.35);
+    box-shadow:0 10px 28px rgba(0,0,0,0.35);
+}
+
+.feature-card h3{
+    font-size:26px;
+    color:#d8b26e;
+    margin-bottom:18px;
+}
+
+.feature-card p{
+    font-size:16px;
+    line-height:30px;
+}
+
+/* ================= 预约表单 ================= */
+
+.form-section{
+    background:
+            linear-gradient(rgba(245,234,214,0.3), rgba(245,234,214,0.3)),
+            url("../images/book/booking.png") no-repeat center center;
+    background-size:cover;
+}
+
+.form-layout{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.form-left{
+    width:470px;
+    padding-top:30px;
+}
+
+.form-left h2{
+    font-size:40px;
+    color:#8b1e1e;
+    margin-bottom:24px;
+    letter-spacing:4px;
+}
+
+.form-left p{
+    font-size:18px;
+    line-height:36px;
+    text-indent:2em;
+    margin-bottom:30px;
+}
+
+.small-map{
+    width:440px;
+    height:280px;
+    padding:10px;
+    background:#fff;
+    box-shadow:0 8px 25px rgba(0,0,0,0.28);
+    transform:rotate(1.5deg);
+}
+
+.small-map img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.booking-form-card{
+    width:560px;
+    padding:42px 45px;
+    background:rgba(255,248,232,0.90);
+    border:2px solid rgba(139,30,30,0.60);
+    box-shadow:0 12px 35px rgba(0,0,0,0.32);
+}
+
+.form-row{
+    margin-bottom:20px;
+}
+
+.form-row label{
+    display:block;
+    font-size:17px;
+    color:#8b1e1e;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea{
+    width:100%;
+    border:1px solid rgba(139,30,30,0.45);
+    background:rgba(255,255,255,0.78);
+    font-size:16px;
+    color:#2b211b;
+    padding:12px 14px;
+    outline:none;
+    font-family:"微软雅黑", Arial, sans-serif;
+}
+
+.form-row input,
+.form-row select{
+    height:46px;
+}
+
+.form-row textarea{
+    height:95px;
+    resize:none;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus{
+    border-color:#8b1e1e;
+    box-shadow:0 0 8px rgba(139,30,30,0.25);
+}
+
+#submitBtn{
+    width:170px;
+    height:48px;
+    border:none;
+    background:#8b1e1e;
+    color:#fff;
+    font-size:17px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+#submitBtn:hover{
+    background:#a62a2a;
+}
+
+.form-tip{
+    display:inline-block;
+    margin-left:18px;
+    color:#8b1e1e;
+    font-weight:bold;
+    font-size:16px;
+}
+
+/* ================= 体验流程 ================= */
+
+.process-section{
+    background:
+            linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.78)),
+            url("../images/book/map2.jpg") no-repeat center center;
+    background-size:cover;
+}
+
+.process-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.process-img{
+    width:390px;
+    height:520px;
+    padding:12px;
+    background:#f5ead6;
+    border:2px solid rgba(216,178,110,0.70);
+    box-shadow:0 12px 35px rgba(0,0,0,0.45);
+}
+
+.process-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.process-text{
+    width:650px;
+    color:#f5ead6;
+}
+
+.process-text h2{
+    font-size:40px;
+    color:#d8b26e;
+    margin-bottom:35px;
+    letter-spacing:4px;
+}
+
+.process-step{
+    display:flex;
+    align-items:center;
+    margin-bottom:24px;
+    padding:22px 26px;
+    background:rgba(255,255,255,0.08);
+    border-left:5px solid #d8b26e;
+}
+
+.process-step span{
+    width:70px;
+    font-size:32px;
+    color:#d8b26e;
+    font-weight:bold;
+}
+
+.process-step p{
+    font-size:18px;
+    line-height:32px;
+}
+
+/* ================= 底部跳转 ================= */
+
+.book-next{
+    padding:70px 0;
+    background:
+            linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82));
+    background-size:cover;
+    text-align:center;
+}
+
+.book-next h2{
+    font-size:30px;
+    color:#d8b26e;
+    margin-bottom:35px;
+}
+
+.book-next a{
+    display:inline-block;
+    width:160px;
+    height:48px;
+    line-height:48px;
+    margin:0 12px;
+    background:#8b1e1e;
+    color:#fff;
+    font-size:16px;
+    border-radius:4px;
+}
+
+.book-next a:hover{
+    background:#a62a2a;
+}
+
+.book-next .next-line{
+    background:transparent;
+    border:1px solid #d8b26e;
+    color:#d8b26e;
+}
+
+/* ================= 页脚 ================= */
+
+.footer{
+    height:100px;
+    background:#120f0d;
+    color:#d8b26e;
+    text-align:center;
+    padding-top:25px;
+    line-height:28px;
+    border-top:1px solid #8b1e1e;
+}
+
+/* ================= 预约成功弹窗 ================= */
+
+.success-modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.72);
+    z-index:999;
+}
+
+.success-box{
+    width:620px;
+    min-height:360px;
+    padding:55px 60px;
+    background:
+            linear-gradient(rgba(245,234,214,0.3), rgba(245,234,214,0.3)),
+            url("../images/book/booking.png") no-repeat center center;
+    background-size:cover;
+    border:2px solid #8b1e1e;
+    box-shadow:0 12px 40px rgba(0,0,0,0.55);
+
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+.close-btn{
+    position:absolute;
+    right:20px;
+    top:12px;
+    font-size:34px;
+    color:#8b1e1e;
+    cursor:pointer;
+}
+
+.success-box h2{
+    font-size:40px;
+    color:#8b1e1e;
+    margin-bottom:24px;
+}
+
+.success-box p{
+    font-size:18px;
+    line-height:34px;
+    color:#2b211b;
+}
+
+.seal{
+    width:120px;
+    height:120px;
+    line-height:104px;
+    margin:28px auto 0;
+    border:8px solid #8b1e1e;
+    border-radius:50%;
+    color:#8b1e1e;
+    font-size:24px;
+    font-weight:bold;
+    transform:rotate(-12deg);
+}

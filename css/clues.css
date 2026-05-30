@@ -1,0 +1,571 @@
+/* ================= clues.html 独立完整样式表 ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* 不使用流式布局 */
+html,body{
+    min-width:1200px;
+}
+
+body{
+    font-family:"微软雅黑", Arial, sans-serif;
+    color:#2b211b;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul,li{
+    list-style:none;
+}
+
+.clues-page{
+    background:
+            linear-gradient(rgba(20,14,10,0.68), rgba(20,14,10,0.78)),
+            url("../images/clues/bbg.png") no-repeat center top fixed;
+    background-size:cover;
+}
+
+.container{
+    width:1100px;
+    margin:0 auto;
+}
+
+/* ================= 顶部导航栏 ================= */
+
+.header{
+    width:100%;
+    height:70px;
+    background:rgba(20,15,12,0.96);
+    border-bottom:1px solid #8b1e1e;
+    position:relative;
+    z-index:20;
+}
+
+.nav{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#d8b26e;
+    letter-spacing:4px;
+}
+
+.nav ul{
+    display:flex;
+}
+
+.nav ul li{
+    margin-left:35px;
+}
+
+.nav ul li a{
+    font-size:16px;
+    color:#f5ead6;
+}
+
+.nav ul li a:hover{
+    color:#d8b26e;
+}
+
+/* ================= 通用区域 ================= */
+
+.section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:45px;
+    color:#8b1e1e;
+    letter-spacing:4px;
+}
+
+.light-title{
+    color:#d8b26e;
+}
+
+/* ================= 顶部封面 ================= */
+
+.clues-hero{
+    height:460px;
+    background:
+            linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.72)),
+            url("../images/clues/map1.png") no-repeat center center;
+    background-size:cover;
+}
+
+.clues-hero-mask{
+    height:460px;
+    background:rgba(0,0,0,0.35);
+}
+
+.clues-hero-content{
+    text-align:center;
+    padding-top:130px;
+}
+
+.clues-hero-content h1{
+    font-size:68px;
+    color:#fff;
+    letter-spacing:8px;
+    text-shadow:5px 5px 14px #000;
+}
+
+.clues-hero-content p{
+    margin-top:24px;
+    font-size:22px;
+    color:#d8b26e;
+}
+
+.hero-btn{
+    display:inline-block;
+    width:150px;
+    height:48px;
+    line-height:48px;
+    margin-top:36px;
+    background:#8b1e1e;
+    color:#fff;
+    border-radius:4px;
+    font-size:16px;
+}
+
+.hero-btn:hover{
+    background:#a62a2a;
+}
+
+/* ================= 案件进度 ================= */
+
+.progress-section{
+    background:rgba(245,234,214,0.80);
+    backdrop-filter:blur(2px);
+}
+
+.progress-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.progress-item{
+    width:120px;
+    text-align:center;
+}
+
+.progress-item span{
+    display:block;
+    width:46px;
+    height:46px;
+    line-height:46px;
+    margin:0 auto 12px;
+    border-radius:50%;
+    background:#b9a98a;
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.progress-item p{
+    font-size:16px;
+    color:#3b2d24;
+}
+
+.progress-item.active span,
+.progress-item.current span{
+    background:#8b1e1e;
+}
+
+.progress-item.current span{
+    box-shadow:0 0 15px rgba(139,30,30,0.75);
+}
+
+.progress-line{
+    width:120px;
+    height:3px;
+    background:#b9a98a;
+    margin:0 8px 30px;
+}
+
+.progress-line.active{
+    background:#8b1e1e;
+}
+
+.progress-tip{
+    text-align:center;
+    font-size:18px;
+    color:#2b211b;
+}
+
+/* ================= 地图区域 ================= */
+
+.map-section{
+    background:
+            linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.72)),
+            url("../images/clues/bbg.png") no-repeat center center;
+    background-size:cover;
+}
+
+.map-wrap{
+    width:1100px;
+    height:780px;
+    position:relative;
+    margin:0 auto;
+    border:8px solid rgba(216,178,110,0.85);
+    box-shadow:0 10px 35px rgba(0,0,0,0.65);
+    overflow:hidden;
+    background:#1a120d;
+}
+
+.map-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* 地图点 */
+.map-point{
+    position:absolute;
+    min-width:90px;
+    height:34px;
+    line-height:34px;
+    padding:0 12px;
+    border:none;
+    border-radius:18px;
+    background:#8b1e1e;
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 0 5px rgba(139,30,30,0.28), 0 0 18px rgba(255,220,160,0.8);
+    z-index:5;
+    transition:all 0.3s;
+}
+
+.map-point:hover{
+    background:#d8b26e;
+    color:#4b1717;
+    transform:scale(1.08);
+}
+
+/* 地图点位置，可后期微调 */
+.point-guangyue{
+    left:355px;
+    top:245px;
+}
+
+.point-shanshan{
+    left:420px;
+    top:520px;
+}
+
+.point-canal{
+    left:700px;
+    top:410px;
+}
+
+.point-linqing{
+    left:755px;
+    top:255px;
+}
+
+.point-teahouse{
+    left:820px;
+    top:575px;
+}
+
+/* ================= 线索卡片 ================= */
+
+.clue-section{
+    background:
+            linear-gradient(rgba(245,234,214,0.82), rgba(245,234,214,0.82)),
+            url("../images/clues/clue/secret_letter_fragment.jpg") no-repeat center center;
+    background-size:cover;
+}
+
+.clue-card-box{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.clue-card{
+    width:520px;
+    height:230px;
+    margin-bottom:36px;
+    display:flex;
+    background:rgba(255,255,255,0.76);
+    border:1px solid rgba(139,30,30,0.55);
+    box-shadow:0 8px 24px rgba(0,0,0,0.22);
+    cursor:pointer;
+    transition:all 0.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.clue-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 32px rgba(0,0,0,0.36);
+}
+
+.clue-card.checked::after{
+    content:"已查看";
+    position:absolute;
+    right:16px;
+    top:14px;
+    width:76px;
+    height:28px;
+    line-height:28px;
+    text-align:center;
+    background:#8b1e1e;
+    color:#fff;
+    font-size:14px;
+    border-radius:14px;
+}
+.clue-img{
+    width:230px;
+    height:230px;
+    overflow:hidden;
+    background:rgba(245,234,214,0.55);
+}
+
+.clue-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    display:block;
+}
+
+.clue-content{
+    width:290px;
+    padding:42px 28px;
+}
+
+.clue-content h3{
+    font-size:28px;
+    color:#8b1e1e;
+    margin-bottom:18px;
+}
+
+.clue-content p{
+    font-size:16px;
+    line-height:28px;
+    color:#2b211b;
+}
+
+.clue-content span{
+    display:inline-block;
+    margin-top:20px;
+    color:#8b1e1e;
+    font-weight:bold;
+}
+
+/* ================= 线索汇总 ================= */
+
+.summary-section{
+    background:rgba(20,14,10,0.82);
+}
+
+.summary-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.summary-text{
+    width:560px;
+}
+
+.summary-text h2{
+    font-size:36px;
+    color:#d8b26e;
+    margin-bottom:25px;
+    letter-spacing:4px;
+}
+
+.summary-text p{
+    font-size:18px;
+    line-height:36px;
+    color:#f5ead6;
+    text-indent:2em;
+}
+
+.unlock-text{
+    margin-top:22px;
+    color:#d8b26e !important;
+    font-weight:bold;
+}
+
+.summary-img{
+    width:450px;
+    height:280px;
+    padding:10px;
+    background:#fff;
+    box-shadow:0 8px 25px rgba(0,0,0,0.35);
+    transform:rotate(1.5deg);
+}
+
+.summary-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* ================= 底部跳转 ================= */
+
+.clues-next{
+    padding:70px 0;
+    background:
+            linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
+            url("../images/clues/old_map2.jpg") no-repeat center center;
+    background-size:cover;
+    text-align:center;
+}
+
+.clues-next h2{
+    font-size:30px;
+    color:#d8b26e;
+    margin-bottom:35px;
+}
+
+.clues-next a{
+    display:inline-block;
+    width:160px;
+    height:48px;
+    line-height:48px;
+    margin:0 12px;
+    background:#8b1e1e;
+    color:#fff;
+    font-size:16px;
+    border-radius:4px;
+}
+
+.clues-next a:hover{
+    background:#a62a2a;
+}
+
+.clues-next .next-line{
+    background:transparent;
+    border:1px solid #d8b26e;
+    color:#d8b26e;
+}
+
+.clues-next .disabled{
+    background:#777;
+    color:#ddd;
+    cursor:not-allowed;
+    pointer-events:none;
+}
+
+/* ================= 页脚 ================= */
+
+.footer{
+    height:100px;
+    background:#120f0d;
+    color:#d8b26e;
+    text-align:center;
+    padding-top:25px;
+    line-height:28px;
+    border-top:1px solid #8b1e1e;
+}
+
+/* ================= 弹窗 ================= */
+
+.clue-modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.72);
+    z-index:999;
+}
+
+.clue-modal-box{
+    width:900px;
+    min-height:480px;
+    display:flex;
+    background:
+            linear-gradient(rgba(245,234,214,0.90), rgba(245,234,214,0.90)),
+            url("../images/clues/clue/secret_letter_fragment.jpg") no-repeat center center;
+    background-size:cover;
+    border:2px solid #8b1e1e;
+    box-shadow:0 10px 40px rgba(0,0,0,0.55);
+
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.clue-close{
+    position:absolute;
+    right:18px;
+    top:10px;
+    font-size:36px;
+    color:#8b1e1e;
+    cursor:pointer;
+    z-index:5;
+}
+
+.clue-close:hover{
+    color:#000;
+}
+
+.modal-img{
+    width:430px;
+    height:480px;
+    padding:20px;
+}
+
+.modal-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    box-shadow:0 6px 18px rgba(0,0,0,0.28);
+}
+
+.modal-text{
+    width:470px;
+    padding:70px 45px 40px 25px;
+}
+
+.modal-text h2{
+    font-size:34px;
+    color:#8b1e1e;
+    margin-bottom:25px;
+}
+
+.modal-text p{
+    font-size:18px;
+    line-height:34px;
+    color:#2b211b;
+    text-indent:2em;
+}
+
+.modal-task{
+    margin-top:25px;
+    padding:18px;
+    background:rgba(139,30,30,0.10);
+    border-left:5px solid #8b1e1e;
+    text-indent:0 !important;
+    color:#8b1e1e !important;
+    font-weight:bold;
+}

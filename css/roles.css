@@ -1,0 +1,453 @@
+/* ================= roles.html 独立完整样式表 ================= */
+
+/* 全局初始化 */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* 固定宽度布局，不使用流式布局 */
+html,body{
+    min-width:1200px;
+}
+
+body{
+    font-family:"微软雅黑", Arial, sans-serif;
+    color:#2b211b;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul,li{
+    list-style:none;
+}
+
+/* 页面整体背景 */
+.roles-page{
+    background:
+            linear-gradient(rgba(18,12,9,0.76), rgba(18,12,9,0.82)),
+            url("../images/roles/bg.png") no-repeat center top;
+    background-size:cover;
+}
+
+/* 固定宽度居中 */
+.container{
+    width:1100px;
+    margin:0 auto;
+}
+
+/* ================= 顶部导航栏 ================= */
+
+.header{
+    width:100%;
+    height:70px;
+    background:rgba(20,15,12,0.96);
+    border-bottom:1px solid #8b1e1e;
+    position:relative;
+    z-index:20;
+}
+
+.nav{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#d8b26e;
+    letter-spacing:4px;
+}
+
+.nav ul{
+    display:flex;
+}
+
+.nav ul li{
+    margin-left:35px;
+}
+
+.nav ul li a{
+    font-size:16px;
+    color:#f5ead6;
+}
+
+.nav ul li a:hover{
+    color:#d8b26e;
+}
+
+/* ================= 通用内容区 ================= */
+
+.section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:45px;
+    color:#8b1e1e;
+    letter-spacing:4px;
+}
+
+.light-title{
+    color:#d8b26e;
+}
+
+/* ================= 顶部封面 ================= */
+
+.roles-hero{
+    height:460px;
+    background:
+            linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.65)),
+            url("../images/roles/map.jpg") no-repeat center center;
+    background-size:cover;
+}
+
+.roles-hero-mask{
+    height:460px;
+    background:rgba(0,0,0,0.28);
+}
+
+.roles-hero-content{
+    text-align:center;
+    padding-top:130px;
+}
+
+.roles-hero-content h1{
+    font-size:68px;
+    color:#fff;
+    letter-spacing:8px;
+    text-shadow:5px 5px 14px #000;
+}
+
+.roles-hero-content p{
+    margin-top:24px;
+    font-size:22px;
+    color:#d8b26e;
+}
+
+.hero-btn{
+    display:inline-block;
+    width:150px;
+    height:48px;
+    line-height:48px;
+    margin-top:36px;
+    background:#8b1e1e;
+    color:#fff;
+    border-radius:4px;
+    font-size:16px;
+}
+
+.hero-btn:hover{
+    background:#a62a2a;
+}
+
+/* ================= 简介区 ================= */
+.intro-section{
+    background:rgba(245,234,214,0.35);
+    backdrop-filter:blur(2px);
+}
+
+.intro-text{
+    width:880px;
+    margin:0 auto;
+    text-align:center;
+    font-size:18px;
+    line-height:36px;
+    color:#2b211b;
+}
+
+/* ================= 角色卡片区 ================= */
+
+.role-section{
+    background:
+            linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)),
+            url("../images/roles/bg.png") no-repeat center center;
+    background-size:cover;
+}
+
+.role-card-box{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+/* 单张卡片外层 */
+.role-card{
+    width:320px;
+    height:460px;
+    margin-bottom:45px;
+    perspective:1000px;
+    cursor:pointer;
+}
+
+/* 翻转内层 */
+.role-card-inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    transition:transform 0.8s;
+    transform-style:preserve-3d;
+}
+
+/* 鼠标经过翻转 */
+.role-card:hover .role-card-inner{
+    transform:rotateY(180deg);
+}
+
+/* 正反面通用 */
+.role-card-front,
+.role-card-back{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    backface-visibility:hidden;
+    border:2px solid rgba(216,178,110,0.65);
+    box-shadow:0 8px 30px rgba(0,0,0,0.55);
+    overflow:hidden;
+}
+
+/* 正面 */
+.role-card-front{
+    background:#1a120d;
+}
+
+.role-card-front img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    display:block;
+    filter:brightness(0.88);
+}
+
+.role-name{
+    height:52px;
+    line-height:52px;
+    text-align:center;
+    font-size:26px;
+    color:#d8b26e;
+    font-weight:bold;
+    letter-spacing:3px;
+    background:rgba(20,15,12,0.96);
+}
+
+.role-card-front p{
+    padding:12px 20px;
+    text-align:center;
+    font-size:15px;
+    line-height:26px;
+    color:#f5ead6;
+}
+
+/* 背面 */
+.role-card-back{
+    transform:rotateY(180deg);
+    padding:38px 30px;
+    background:
+            linear-gradient(rgba(245,234,214,0.90), rgba(245,234,214,0.90)),
+            url("../images/roles/roles/bg.j     pg") no-repeat center center;
+    background-size:cover;
+}
+
+.role-card-back h3{
+    text-align:center;
+    font-size:30px;
+    color:#8b1e1e;
+    margin-bottom:28px;
+}
+
+.role-card-back p{
+    font-size:16px;
+    line-height:31px;
+    color:#2b211b;
+    margin-bottom:18px;
+}
+
+.role-card-back p span{
+    color:#8b1e1e;
+    font-weight:bold;
+}
+
+.role-btn{
+    display:block;
+    width:130px;
+    height:42px;
+    margin:30px auto 0;
+    border:none;
+    background:#8b1e1e;
+    color:#fff;
+    font-size:15px;
+    cursor:pointer;
+    border-radius:4px;
+}
+
+.role-btn:hover{
+    background:#a62a2a;
+}
+
+/* ================= 角色说明区 ================= */
+
+.role-info-section{
+    background:
+            linear-gradient(rgba(245,234,214,0.78), rgba(245,234,214,0.78)),
+            url("../images/roles/pic2.png") no-repeat center center;
+    background-size:cover;
+}
+
+.role-info-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.role-info-text{
+    width:560px;
+}
+
+.role-info-text h2{
+    font-size:34px;
+    color:#8b1e1e;
+    margin-bottom:25px;
+    letter-spacing:3px;
+}
+
+.role-info-text p{
+    font-size:18px;
+    line-height:36px;
+    color:#2b211b;
+    text-indent:2em;
+}
+
+.role-info-img{
+    width:440px;
+    height:280px;
+    padding:10px;
+    background:#fff;
+    box-shadow:0 8px 25px rgba(0,0,0,0.30);
+    transform:rotate(-1.5deg);
+}
+
+.role-info-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* ================= 底部跳转区 ================= */
+
+.role-next{
+    padding:70px 0;
+    text-align:center;
+    background:
+            linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.78)),
+            url("../images/roles/pic3.jpg") no-repeat center center;
+    background-size:cover;
+}
+
+.role-next h2{
+    font-size:30px;
+    color:#d8b26e;
+    margin-bottom:35px;
+}
+
+.role-next a{
+    display:inline-block;
+    width:160px;
+    height:48px;
+    line-height:48px;
+    margin:0 12px;
+    background:#8b1e1e;
+    color:#fff;
+    font-size:16px;
+    border-radius:4px;
+}
+
+.role-next a:hover{
+    background:#a62a2a;
+}
+
+.role-next .next-line{
+    background:transparent;
+    border:1px solid #d8b26e;
+    color:#d8b26e;
+}
+
+/* ================= 页脚 ================= */
+
+.footer{
+    height:100px;
+    background:#120f0d;
+    color:#d8b26e;
+    text-align:center;
+    padding-top:25px;
+    line-height:28px;
+    border-top:1px solid #8b1e1e;
+}
+
+/* ================= 角色弹窗 ================= */
+
+.role-modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.70);
+    z-index:999;
+}
+
+.role-modal-box{
+    width:560px;
+    min-height:280px;
+    padding:45px 50px;
+    border:2px solid #8b1e1e;
+    box-shadow:0 10px 35px rgba(0,0,0,0.50);
+
+    background:
+            linear-gradient(rgba(245,234,214,0.90), rgba(245,234,214,0.90)),
+            url("../images/roles/map2.jpg") no-repeat center center;
+    background-size:cover;
+
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.role-modal-box h2{
+    font-size:32px;
+    color:#8b1e1e;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.role-modal-box p{
+    font-size:18px;
+    line-height:34px;
+    color:#2b211b;
+    text-indent:2em;
+}
+
+.role-close{
+    position:absolute;
+    right:18px;
+    top:10px;
+    font-size:34px;
+    color:#8b1e1e;
+    cursor:pointer;
+}
+
+.role-close:hover{
+    color:#000;
+}

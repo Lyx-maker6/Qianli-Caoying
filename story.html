@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>剧情背景 - 千里漕影</title>
+    <link rel="stylesheet" href="./css/story.css">
+    <link rel="stylesheet" href="./css/music.css">
+</head>
+<body class="story-page">
+
+<audio id="bgm" src="./audio/story.mp3" loop></audio>
+<div class="music-btn playing" id="musicBtn">♫</div>
+
+<!-- 顶部导航栏 -->
+<div class="header">
+    <div class="container nav">
+        <div class="logo">千里漕影</div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="story.html">剧情背景</a></li>
+            <li><a href="roles.html">人物角色</a></li>
+            <li><a href="clues.html">运河线索</a></li>
+            <li><a href="learn.html">汉语任务</a></li>
+            <li><a href="booking.html">预约体验</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 剧情页顶部封面 -->
+<div class="story-hero">
+    <div class="story-hero-mask">
+        <div class="container story-hero-content">
+            <h1>光岳楼密信</h1>
+            <p>一封密信，牵出一桩被尘封的漕银旧案。</p>
+        </div>
+    </div>
+</div>
+
+<!-- 故事背景 -->
+<div class="section story-section">
+    <div class="container">
+        <h2 class="section-title">案件背景</h2>
+
+        <div class="story-box">
+            <div class="story-text">
+                <h3>漕影迷踪，真相藏于账册之间</h3>
+                <p>
+                    清代聊城因京杭大运河而商贾云集、漕运繁盛。光岳楼下，舟船往来，
+                    临清钞关每日核验货物与税银，维系着南北漕运的秩序。
+                </p>
+                <p>
+                    然而，一批本应入库的漕运官银突然失踪，两地账册记录出现矛盾，
+                    运河沿线的货物数量也与实际不符。就在众人陷入迷局之时，
+                    一封写有暗号的密信悄然出现在光岳楼中。
+                </p>
+                <p>
+                    玩家将分别扮演钞关文书、漕运账房、茶馆掌柜、异国旅人、密信守护人等角色，
+                    通过调查账本残页、古地图、钞关印章和人物口供，逐步揭开官银失踪背后的真相。
+                </p>
+            </div>
+
+            <div class="story-img story-slider">
+                <img class="story-slide active" src="./images/story/轮播图/pic1.png" alt="案件线索图">
+                <img class="story-slide" src="./images/story/轮播图/pic2.jpg" alt="案件线索图">
+                <img class="story-slide" src="./images/story/轮播图/pic3.jpg" alt="案件线索图">
+                <img class="story-slide" src="./images/story/轮播图/pic4.jpg" alt="案件线索图">
+                <img class="story-slide" src="./images/story/轮播图/pic5.jpg" alt="案件线索图">
+
+                <button class="story-slider-btn story-prev">&lt;</button>
+                <button class="story-slider-btn story-next-btn">&gt;</button>
+
+                <div class="story-slider-dots">
+                    <span class="story-dot active"></span>
+                    <span class="story-dot"></span>
+                    <span class="story-dot"></span>
+                    <span class="story-dot"></span>
+                    <span class="story-dot"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 案件线索 -->
+<div class="section clue-section">
+    <div class="container">
+        <h2 class="section-title">案件线索</h2>
+
+        <div class="clue-list">
+            <div class="clue-card" data-title="密信" data-content="密信中写有神秘暗号，是漕银旧案开启的关键。玩家需要根据密信中的方位提示，判断下一处调查地点。">
+                <h3>密信</h3>
+                <p>写有神秘暗号，是漕银旧案开启的关键。</p>
+            </div>
+
+            <div class="clue-card" data-title="账本" data-content="账本记录着漕运货物数量，但其中几页出现涂改痕迹。玩家需要比较不同地点的货物记录，找出数量异常。">
+                <h3>账本</h3>
+                <p>记录货物数量，却出现被涂改的痕迹。</p>
+            </div>
+
+            <div class="clue-card" data-title="印章" data-content="印章来自临清钞关，是核验货物与税银的重要凭证。印章上的缺口可能暗示账册被人调换。">
+                <h3>印章</h3>
+                <p>来自钞关，是核验货物与税银的重要凭证。</p>
+            </div>
+
+            <div class="clue-card" data-title="地图" data-content="地图标记着运河沿线的重要节点和隐藏路线。玩家需要结合密信中的方位词，找到官银失踪的关键地点。">
+                <h3>地图</h3>
+                <p>标记着运河沿线的重要节点和隐藏路线。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 文化地点 -->
+<div class="section place-section">
+    <div class="container">
+        <h2 class="section-title">文化地点</h2>
+
+        <div class="place-box">
+            <div class="place-item">
+                <img src="./images/story/光岳楼2.jpeg" alt="光岳楼">
+                <div>
+                    <h3>光岳楼</h3>
+                    <p>密信出现之地，也是玩家聚集和案件展开的核心场景。</p>
+                </div>
+            </div>
+
+            <div class="place-item">
+                <img src="./images/story/运河.jpeg" alt="聊城运河">
+                <div>
+                    <h3>聊城运河</h3>
+                    <p>漕运往来、商贸交流与文化传播的重要通道。</p>
+                </div>
+            </div>
+
+            <div class="place-item">
+                <img src="./images/story/山陕会馆.jpeg" alt="山陕会馆">
+                <div>
+                    <h3>山陕会馆</h3>
+                    <p>见证运河商帮文化与聊城商业繁盛的重要历史建筑。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 页面跳转按钮 -->
+<div class="story-next">
+    <div class="container">
+        <h2>你已收到密信，下一步请选择身份。</h2>
+        <a href="roles.html">查看人物角色</a>
+        <a href="clues.html" class="next-line">进入线索地图</a>
+    </div>
+</div>
+
+<!-- 底部 -->
+<div class="footer">
+    <p>《聊城拾遗：千里漕影》Web课程设计作品</p>
+    <p>3班 2024405943 卢昱萱</p>
+</div>
+
+<!-- 线索弹窗 -->
+<div class="clue-modal" id="clueModal">
+    <div class="clue-modal-box">
+        <span class="clue-close" id="clueClose">×</span>
+        <h2 id="modalTitle">线索标题</h2>
+        <p id="modalContent">线索内容</p>
+    </div>
+</div>
+
+<script src="./js/story_slider.js"></script>
+<script src="./js/story_modal.js"></script>
+<script src="./js/music.js"></script>
+</body>
+</html>

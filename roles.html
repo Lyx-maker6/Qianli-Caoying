@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>人物角色 - 千里漕影</title>
+    <link rel="stylesheet" href="./css/roles.css">
+    <link rel="stylesheet" href="./css/music.css">
+</head>
+<body class="roles-page">
+
+<audio id="bgm" src="./audio/roles.mp3" loop></audio>
+<div class="music-btn playing" id="musicBtn">♫</div>
+
+<!-- 顶部导航栏 -->
+<div class="header">
+    <div class="container nav">
+        <div class="logo">千里漕影</div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="story.html">剧情背景</a></li>
+            <li><a href="roles.html">人物角色</a></li>
+            <li><a href="clues.html">运河线索</a></li>
+            <li><a href="learn.html">汉语任务</a></li>
+            <li><a href="book.html">预约体验</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 角色页封面 -->
+<div class="roles-hero">
+    <div class="roles-hero-mask">
+        <div class="container roles-hero-content">
+            <h1>人物角色档案</h1>
+            <p>每一个身份，都藏着一段不能公开的线索。</p>
+            <a href="#roleList" class="hero-btn">选择身份</a>
+        </div>
+    </div>
+</div>
+
+<!-- 页面简介 -->
+<div class="section intro-section">
+    <div class="container">
+        <h2 class="section-title">身份选择</h2>
+        <p class="intro-text">
+            玩家将在不同身份之间选择角色，通过角色扮演、线索交换和语言任务完成案件推理。
+            每个角色拥有不同的身份背景、隐藏任务和汉语表达任务。请谨慎选择，因为你的身份可能决定案件的走向。
+        </p>
+    </div>
+</div>
+
+<!-- 角色翻转卡片 -->
+<div class="section role-section" id="roleList">
+    <div class="container">
+        <h2 class="section-title light-title">角色档案墙</h2>
+
+        <div class="role-card-box">
+
+            <!-- 钞关文书 -->
+            <div class="role-card" data-role="钞关文书">
+                <div class="role-card-inner">
+                    <div class="role-card-front">
+                        <img src="./images/roles/roles/钞关文书.png" alt="钞关文书">
+                        <div class="role-name">钞关文书</div>
+                        <p>负责临清钞关账册登记与税银核验。</p>
+                    </div>
+
+                    <div class="role-card-back">
+                        <h3>钞关文书</h3>
+                        <p><span>隐藏任务：</span>找出税银登记册中被篡改的数字。</p>
+                        <p><span>语言任务：</span>使用“比”字句说明两处账目差异。</p>
+                        <button class="role-btn">查看档案</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 漕运账房 -->
+            <div class="role-card" data-role="漕运账房">
+                <div class="role-card-inner">
+                    <div class="role-card-front">
+                        <img src="./images/roles/roles/漕运账房.png" alt="漕运账房">
+                        <div class="role-name">漕运账房</div>
+                        <p>掌管漕运货物账本，熟悉船号与银两往来。</p>
+                    </div>
+
+                    <div class="role-card-back">
+                        <h3>漕运账房</h3>
+                        <p><span>隐藏任务：</span>核对货物数量，寻找账本涂改痕迹。</p>
+                        <p><span>语言任务：</span>用数量表达说明“多、少、相差”。</p>
+                        <button class="role-btn">查看档案</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 茶馆掌柜 -->
+            <div class="role-card" data-role="茶馆掌柜">
+                <div class="role-card-inner">
+                    <div class="role-card-front">
+                        <img src="./images/roles/roles/茶馆掌柜.png" alt="茶馆掌柜">
+                        <div class="role-name">茶馆掌柜</div>
+                        <p>经营运河边茶楼，消息灵通，往来客商众多。</p>
+                    </div>
+
+                    <div class="role-card-back">
+                        <h3>茶馆掌柜</h3>
+                        <p><span>隐藏任务：</span>辨认夜间进入茶楼的可疑客人。</p>
+                        <p><span>语言任务：</span>使用询问句向队友确认人物行踪。</p>
+                        <button class="role-btn">查看档案</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 异国旅人 -->
+            <div class="role-card" data-role="异国旅人">
+                <div class="role-card-inner">
+                    <div class="role-card-front">
+                        <img src="./images/roles/roles/异国旅人.png" alt="异国旅人">
+                        <div class="role-name">异国旅人</div>
+                        <p>沿运河而来，随身携带地图与密封书信。</p>
+                    </div>
+
+                    <div class="role-card-back">
+                        <h3>异国旅人</h3>
+                        <p><span>隐藏任务：</span>解释地图上陌生标记与运河路线。</p>
+                        <p><span>语言任务：</span>用方位词描述地点位置。</p>
+                        <button class="role-btn">查看档案</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 密信守护人 -->
+            <div class="role-card" data-role="密信守护人">
+                <div class="role-card-inner">
+                    <div class="role-card-front">
+                        <img src="./images/roles/roles/密信守护人.png" alt="密信守护人">
+                        <div class="role-name">密信守护人</div>
+                        <p>受人托付保管密信，知晓案件关键暗号。</p>
+                    </div>
+
+                    <div class="role-card-back">
+                        <h3>密信守护人</h3>
+                        <p><span>隐藏任务：</span>保护密信内容，判断谁值得信任。</p>
+                        <p><span>语言任务：</span>使用推理表达说出判断依据。</p>
+                        <button class="role-btn">查看档案</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商帮学徒 -->
+            <div class="role-card" data-role="商帮学徒">
+                <div class="role-card-inner">
+                    <div class="role-card-front">
+                        <img src="./images/roles/roles/商帮学徒.png" alt="商帮学徒">
+                        <div class="role-name">商帮学徒</div>
+                        <p>跟随商帮往来南北，负责登记货物和路线。</p>
+                    </div>
+
+                    <div class="role-card-back">
+                        <h3>商帮学徒</h3>
+                        <p><span>隐藏任务：</span>找出货物转运过程中异常的路线。</p>
+                        <p><span>语言任务：</span>用“先……再……”描述行动顺序。</p>
+                        <button class="role-btn">查看档案</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 角色说明区 -->
+<div class="section role-info-section">
+    <div class="container role-info-box">
+        <div class="role-info-text">
+            <h2>角色机制说明</h2>
+            <p>
+                每位玩家进入游戏后，需要依据自己的角色身份完成指定任务。
+                角色之间可以交换信息，但不能直接暴露隐藏任务。
+                通过中文提问、描述、比较和推理，玩家逐步拼合线索，找出漕银失踪的真相。
+            </p>
+        </div>
+
+        <div class="role-info-img">
+            <img src="./images/roles/pic1.png" alt="角色机制图">
+        </div>
+    </div>
+</div>
+
+<!-- 底部跳转 -->
+<div class="role-next">
+    <div class="container">
+        <h2>身份已确认，下一步进入线索地图。</h2>
+        <a href="story.html" class="next-line">返回剧情背景</a>
+        <a href="clues.html">进入线索地图</a>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<div class="footer">
+    <p>《聊城拾遗：千里漕影》Web课程设计作品</p>
+    <p>3班 2024405943 卢昱萱</p>
+</div>
+
+<!-- 角色弹窗 -->
+<div class="role-modal" id="roleModal">
+    <div class="role-modal-box">
+        <span class="role-close" id="roleClose">×</span>
+        <h2 id="modalRoleName">角色名称</h2>
+        <p id="modalRoleDesc">角色说明</p>
+    </div>
+</div>
+
+<script src="./js/roles.js"></script>
+<script src="./js/music.js"></script>
+</body>
+</html>

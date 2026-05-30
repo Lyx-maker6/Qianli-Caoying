@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>预约体验 - 千里漕影</title>
+    <link rel="stylesheet" href="./css/book.css">
+    <link rel="stylesheet" href="./css/music.css">
+</head>
+<body class="book-page">
+
+<audio id="bgm" src="./audio/booking.mp3" loop></audio>
+<div class="music-btn playing" id="musicBtn">♫</div>
+
+
+<!-- 顶部导航栏 -->
+<div class="header">
+    <div class="container nav">
+        <div class="logo">千里漕影</div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="story.html">剧情背景</a></li>
+            <li><a href="roles.html">人物角色</a></li>
+            <li><a href="clues.html">运河线索</a></li>
+            <li><a href="learn.html">汉语任务</a></li>
+            <li><a href="booking.html">预约体验</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 顶部封面 -->
+<div class="book-hero">
+    <div class="book-hero-mask">
+        <div class="container book-hero-content">
+            <h1>预约体验</h1>
+            <p>加入《聊城运河遗秘》，开启一场运河文化沉浸式汉语课堂。</p>
+            <a href="#bookingFormArea" class="hero-btn">立即预约</a>
+        </div>
+    </div>
+</div>
+
+<!-- 体验导览 -->
+<div class="section guide-section">
+    <div class="container guide-box">
+
+        <!-- 必须使用的 pic2.jpg -->
+        <div class="guide-poster">
+            <img src="./images/book/pic2.jpg" alt="聊城运河遗秘海报">
+        </div>
+
+        <div class="guide-text">
+            <h2>沉浸式剧本课堂</h2>
+            <p>
+                本课程以聊城运河文化为背景，将剧情推理、角色扮演、线索探索和汉语任务融合在一起。
+                学习者将在“玩中学、学中用”的过程中了解运河文化，并练习真实情境中的中文表达。
+            </p>
+
+            <div class="guide-tags">
+                <span>剧情推理</span>
+                <span>角色扮演</span>
+                <span>汉语任务</span>
+                <span>文化体验</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 课程亮点 -->
+<div class="section feature-section">
+    <div class="container">
+        <h2 class="section-title">体验亮点</h2>
+
+        <div class="feature-box">
+            <div class="feature-card">
+                <h3>文化叙事</h3>
+                <p>以光岳楼、山陕会馆、临清钞关和聊城运河为线索，构建沉浸式文化故事。</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>语言任务</h3>
+                <p>练习方位表达、比字句、路线描述和情境问答，提升中文实际运用能力。</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>交际体验</h3>
+                <p>通过角色扮演完成问路、询问线索、协作推理等交际任务。</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>线索解谜</h3>
+                <p>根据密信、账册、印章和路线图推理案件真相，增强学习参与感。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 预约表单 -->
+<div class="section form-section" id="bookingFormArea">
+    <div class="container form-layout">
+
+        <div class="form-left">
+            <h2>填写预约信息</h2>
+            <p>
+                请填写以下信息，选择你想体验的角色身份和预约场次。
+                提交后系统将生成预约提示。
+            </p>
+
+            <div class="small-map">
+                <img src="./images/book/map.png" alt="聊城运河文化地图">
+            </div>
+        </div>
+
+        <div class="booking-form-card">
+            <form id="bookingForm">
+
+                <div class="form-row">
+                    <label for="username">姓名</label>
+                    <input type="text" id="username" placeholder="请输入姓名">
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">联系方式</label>
+                    <input type="text" id="phone" placeholder="请输入手机号或邮箱">
+                </div>
+
+                <div class="form-row">
+                    <label for="role">体验身份</label>
+                    <select id="role">
+                        <option value="">请选择体验身份</option>
+                        <option value="钞关文书">钞关文书</option>
+                        <option value="漕运账房">漕运账房</option>
+                        <option value="茶馆掌柜">茶馆掌柜</option>
+                        <option value="异国旅人">异国旅人</option>
+                        <option value="密信守护人">密信守护人</option>
+                        <option value="商帮学徒">商帮学徒</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="time">预约场次</label>
+                    <select id="time">
+                        <option value="">请选择预约场次</option>
+                        <option value="周一 14:00-15:30">周一 14:00-15:30</option>
+                        <option value="周三 15:30-17:00">周三 15:30-17:00</option>
+                        <option value="周五 19:00-20:30">周五 19:00-20:30</option>
+                        <option value="周六 09:30-11:00">周六 09:30-11:00</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="people">参与人数</label>
+                    <select id="people">
+                        <option value="">请选择人数</option>
+                        <option value="1人">1人</option>
+                        <option value="2人">2人</option>
+                        <option value="3人">3人</option>
+                        <option value="4人及以上">4人及以上</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="message">备注留言</label>
+                    <textarea id="message" placeholder="可以填写你的学习需求或想体验的内容"></textarea>
+                </div>
+
+                <button type="button" id="submitBtn">提交预约</button>
+
+                <p class="form-tip" id="formTip"></p>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<!-- 体验流程 -->
+<div class="section process-section">
+    <div class="container process-box">
+
+        <div class="process-img">
+            <img src="./images/book/pic1.png" alt="体验路线图">
+        </div>
+
+        <div class="process-text">
+            <h2>预约后你将体验什么？</h2>
+
+            <div class="process-step">
+                <span>01</span>
+                <p>领取身份卡，进入运河旧案剧情。</p>
+            </div>
+
+            <div class="process-step">
+                <span>02</span>
+                <p>根据地图和线索，完成案件探索。</p>
+            </div>
+
+            <div class="process-step">
+                <span>03</span>
+                <p>完成汉语任务，使用中文进行推理表达。</p>
+            </div>
+
+            <div class="process-step">
+                <span>04</span>
+                <p>汇总证据，解锁最终真相。</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 底部跳转 -->
+<div class="book-next">
+    <div class="container">
+        <h2>准备好了吗？一封密信，正在等待新的探案者。</h2>
+        <a href="learn.html" class="next-line">返回汉语任务</a>
+        <a href="index.html">回到首页</a>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<div class="footer">
+    <p>《聊城拾遗：千里漕影》Web课程设计作品</p>
+    <p>3班 2024405943 卢昱萱</p>
+</div>
+
+<!-- 预约成功弹窗 -->
+<div class="success-modal" id="successModal">
+    <div class="success-box">
+        <span class="close-btn" id="closeBtn">×</span>
+        <h2>预约成功</h2>
+        <p id="successText"></p>
+        <div class="seal">已预约</div>
+    </div>
+</div>
+
+<script src="./js/book.js"></script>
+<script src="./js/music.js"></script>
+</body>
+</html>

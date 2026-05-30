@@ -1,0 +1,40 @@
+/* 音乐按钮 */
+.music-btn{
+    position:fixed;
+    right:28px;
+    bottom:28px;
+    width:54px;
+    height:54px;
+    line-height:54px;
+    text-align:center;
+    border-radius:50%;
+    background:rgba(139,30,30,0.92);
+    color:#f5ead6;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:9999;
+    box-shadow:0 0 18px rgba(0,0,0,0.45);
+    border:2px solid #d8b26e;
+    transition:all 0.3s;
+}
+
+.music-btn:hover{
+    transform:scale(1.08);
+    background:#a62a2a;
+}
+
+.music-btn.playing{
+    animation:musicRotate 4s linear infinite;
+    background:#d8b26e;
+    color:#8b1e1e;
+}
+
+@keyframes musicRotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}

@@ -1,0 +1,412 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"微软雅黑", Arial, sans-serif;
+    background:#1b1715;
+    color:#f5ead6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul,li{
+    list-style:none;
+}
+
+.container{
+    width:1100px;
+    margin:0 auto;
+}
+
+/* 顶部导航 */
+.header{
+    width:100%;
+    height:70px;
+    background:rgba(20,15,12,0.95);
+    border-bottom:1px solid #8b1e1e;
+}
+
+.nav{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#d8b26e;
+    letter-spacing:4px;
+}
+
+.nav ul{
+    display:flex;
+}
+
+.nav ul li{
+    margin-left:35px;
+}
+
+.nav ul li a{
+    font-size:16px;
+    color:#f5ead6;
+}
+
+.nav ul li a:hover{
+    color:#d8b26e;
+}
+
+/* 首页封面 */
+/* 首页顶部封面轮播 */
+.hero{
+    height:650px;
+    position:relative;
+    overflow:hidden;
+}
+
+/* 背景图片容器 */
+.top-banner{
+    width:100%;
+    height:650px;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+/* 每一张背景图 */
+.top-slide{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    position:absolute;
+    left:0;
+    top:0;
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+/* 当前显示的背景图 */
+.top-slide.active{
+    opacity:1;
+    z-index:1;
+}
+
+/* 黑色遮罩 */
+.hero-mask{
+    height:650px;
+    position:relative;
+    z-index:2;
+    background:rgba(0,0,0,0.55);
+}
+
+/* 首页文字内容 */
+.hero-content{
+    padding-top:180px;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:64px;
+    color:#fff;
+    letter-spacing:6px;
+    text-shadow:4px 4px 10px #000;
+}
+
+.hero-content h2{
+    margin-top:25px;
+    font-size:28px;
+    color:#d8b26e;
+}
+
+.hero-content p{
+    margin-top:25px;
+    font-size:20px;
+    color:#f5ead6;
+}
+
+.hero-btns{
+    margin-top:45px;
+}
+
+.hero-btns a{
+    display:inline-block;
+    width:150px;
+    height:46px;
+    line-height:46px;
+    margin:0 12px;
+    background:#8b1e1e;
+    color:#fff;
+    border-radius:4px;
+    font-size:16px;
+}
+
+.hero-btns a:hover{
+    background:#a62a2a;
+}
+
+.hero-btns .btn-line{
+    background:transparent;
+    border:1px solid #d8b26e;
+    color:#d8b26e;
+}
+
+/* 首页轮播左右按钮 */
+.top-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:5;
+    width:50px;
+    height:70px;
+    border:none;
+    background:rgba(0,0,0,0.35);
+    color:#f5ead6;
+    font-size:36px;
+    cursor:pointer;
+    display:none;
+}
+
+.hero:hover .top-btn{
+    display:block;
+}
+
+.top-prev{
+    left:30px;
+}
+
+.top-next{
+    right:30px;
+}
+
+.top-btn:hover{
+    background:rgba(139,30,30,0.85);
+}
+
+/* 首页轮播小圆点 */
+.top-dots{
+    position:absolute;
+    left:0;
+    bottom:30px;
+    width:100%;
+    text-align:center;
+    z-index:6;
+}
+
+.top-dot{
+    display:inline-block;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.55);
+    margin:0 6px;
+    cursor:pointer;
+}
+
+.top-dot.active{
+    background:#d8b26e;
+}
+
+/* 通用内容区 */
+.section{
+    padding:70px 0;
+    background:
+            linear-gradient(rgba(245,234,214,0.78), rgba(245,234,214,0.78)),
+            url("../images/bbg2.jpg") no-repeat center center;
+    background-size:cover;
+    color:#2b211b;
+}
+
+.dark-section{
+    background:
+            linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.72)),
+            url("../images/nano俯瞰图.png") no-repeat center center;
+    background-size:cover;
+    color:#f5ead6;
+}
+
+.section-title{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:40px;
+    color:#8b1e1e;
+    letter-spacing:3px;
+}
+
+.dark-section .section-title{
+    color:#d8b26e;
+}
+
+.intro-text{
+    width:850px;
+    margin:0 auto;
+    font-size:18px;
+    line-height:36px;
+    text-align:center;
+}
+
+/* 三个卡片 */
+.card-box{
+    display:flex;
+    justify-content:space-between;
+}
+
+.card{
+    width:330px;
+    padding:35px 25px;
+    background:rgba(255,255,255,0.08);
+    border:2px solid #8b1e1e;
+    text-align:center;
+    transition:all 0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(216,178,110,0.4);
+}
+
+.card h3{
+    font-size:24px;
+    color:#d8b26e;
+    margin-bottom:20px;
+}
+
+.card p{
+    font-size:16px;
+    line-height:30px;
+}
+
+/* 运河文化场景：三组小轮播 */
+.scene-list{
+    display:flex;
+    justify-content:space-between;
+}
+
+.scene-card{
+    width:330px;
+    background-image: url("../images/bottom_banner_pic/bg.jpg");
+    background-size:cover;
+    box-shadow:0 5px 18px rgba(0,0,0,0.25);
+    overflow:hidden;
+    transition:all 0.4s;
+}
+
+.scene-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 28px rgba(0,0,0,0.35);
+}
+
+.mini-slider{
+    width:330px;
+    height:220px;
+    position:relative;
+    overflow:hidden;
+    background:#000;
+}
+
+.mini-slide{
+    width:330px;
+    height:220px;
+    object-fit:cover;
+    position:absolute;
+    left:0;
+    top:0;
+    opacity:0;
+    transition:opacity 0.8s ease;
+}
+
+.mini-slide.active{
+    opacity:1;
+    z-index:2;
+}
+
+/* 小轮播左右切换按钮 */
+.mini-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:6;
+    width:32px;
+    height:45px;
+    border:none;
+    background:rgba(0,0,0,0.45);
+    color:#fff;
+    font-size:24px;
+    cursor:pointer;
+    display:none;
+}
+
+.mini-prev{
+    left:0;
+}
+
+.mini-next{
+    right:0;
+}
+
+.mini-slider:hover .mini-btn{
+    display:block;
+}
+
+.mini-btn:hover{
+    background:rgba(139,30,30,0.85);
+}
+
+.mini-dots{
+    position:absolute;
+    left:0;
+    bottom:12px;
+    width:100%;
+    text-align:center;
+    z-index:5;
+}
+
+.mini-dot{
+    display:inline-block;
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.55);
+    margin:0 4px;
+}
+
+.mini-dot.active{
+    background:#d8b26e;
+}
+
+.scene-card h3{
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    color:#2b211b;
+    font-size:22px;
+}
+
+.scene-card p{
+    padding:0 22px 25px;
+    color:#4a3528;
+    font-size:15px;
+    line-height:26px;
+    text-align:center;
+}
+
+
+
+
+
+/* 底部 */
+.footer{
+    height:100px;
+    background:#120f0d;
+    color:#d8b26e;
+    text-align:center;
+    padding-top:25px;
+    line-height:28px;
+    border-top:1px solid #8b1e1e;
+}

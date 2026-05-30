@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>汉语任务 - 千里漕影</title>
+    <link rel="stylesheet" href="./css/learn.css">
+    <link rel="stylesheet" href="./css/music.css">
+</head>
+<body class="learn-page">
+
+<audio id="bgm" src="./audio/bgm.mp3" loop></audio>
+<div class="music-btn playing" id="musicBtn">♫</div>
+
+
+<!-- 顶部导航栏 -->
+<div class="header">
+    <div class="container nav">
+        <div class="logo">千里漕影</div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="story.html">剧情背景</a></li>
+            <li><a href="roles.html">人物角色</a></li>
+            <li><a href="clues.html">运河线索</a></li>
+            <li><a href="learn.html">汉语任务</a></li>
+            <li><a href="booking.html">预约体验</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 页面封面 -->
+<div class="learn-hero">
+    <div class="hero-mask">
+        <div class="container hero-content">
+            <h1>汉语任务卷宗</h1>
+            <p>根据线索完成语言挑战，用中文还原漕银失踪真相。</p>
+            <a href="#taskArea" class="hero-btn">开始任务</a>
+        </div>
+    </div>
+</div>
+
+<!-- 任务说明 -->
+<div class="section intro-section">
+    <div class="container intro-box">
+        <div class="intro-text">
+            <h2>任务说明</h2>
+            <p>
+                玩家需要根据前面获得的线索，完成方位表达、比较句、路线描述和情境对话四类汉语任务。
+                每完成一个任务，系统会点亮对应印章。全部完成后，即可进入预约体验页面。
+            </p>
+        </div>
+
+        <div class="intro-card">
+            <h3>学习目标</h3>
+            <p>掌握“在……的……方向”“比字句”“先……再……”和问路交流表达。</p>
+        </div>
+    </div>
+</div>
+
+<!-- 任务进度 -->
+<div class="section progress-section">
+    <div class="container">
+        <h2 class="section-title">任务进度</h2>
+
+        <div class="progress-box">
+            <div class="progress-item" id="progress1">
+                <span>1</span>
+                <p>方位表达</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-item" id="progress2">
+                <span>2</span>
+                <p>比字句</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-item" id="progress3">
+                <span>3</span>
+                <p>路线描述</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-item" id="progress4">
+                <span>4</span>
+                <p>情境对话</p>
+            </div>
+        </div>
+
+        <p class="progress-tip" id="progressTip">
+            当前已完成 0 / 4 个任务。
+        </p>
+    </div>
+</div>
+
+<!-- 汉语任务区 -->
+<div class="section task-section" id="taskArea">
+    <div class="container">
+        <h2 class="section-title light-title">语言挑战</h2>
+
+        <div class="task-list">
+
+            <!-- 任务一 -->
+            <div class="task-card">
+                <div class="task-img">
+                    <img src="./images/learn/task_position_map.jpg" alt="方位任务图">
+                </div>
+
+                <div class="task-content">
+                    <div class="task-tag">任务一：方位表达</div>
+                    <h3>光岳楼在哪里？</h3>
+                    <p>根据地图提示，选择正确的方位表达。</p>
+
+                    <div class="question-box">
+                        <p class="question">光岳楼位于聊城古城的什么位置？</p>
+
+                        <label><input type="radio" name="q1" value="a"> A. 光岳楼位于聊城古城的中心位置。</label>
+                        <label><input type="radio" name="q1" value="b"> B. 光岳楼位于聊城古城的西北角。</label>
+                        <label><input type="radio" name="q1" value="c"> C. 光岳楼位于聊城古城的城外。</label>
+                    </div>
+
+                    <button class="check-btn" data-task="1">提交答案</button>
+                    <p class="result-text" id="result1"></p>
+                </div>
+            </div>
+
+            <!-- 任务二 -->
+            <div class="task-card reverse-card">
+                <div class="task-img">
+                    <img src="./images/learn/task_comparison_account.jpg" alt="比字句任务图">
+                </div>
+
+                <div class="task-content">
+                    <div class="task-tag">任务二：比字句</div>
+                    <h3>账册数量对比</h3>
+                    <p>根据账册记录，完成“比”字句。</p>
+
+                    <div class="question-box">
+                        <p class="question">请补全句子：临清关粮食 ____ 聊城关多三百石。</p>
+
+                        <select id="q2">
+                            <option value="">请选择</option>
+                            <option value="a">和</option>
+                            <option value="b">比</option>
+                            <option value="c">在</option>
+                        </select>
+                    </div>
+
+                    <button class="check-btn" data-task="2">提交答案</button>
+                    <p class="result-text" id="result2"></p>
+                </div>
+            </div>
+
+            <!-- 任务三 -->
+            <div class="task-card">
+                <div class="task-img">
+                    <img src="./images/learn/task_route_map.jpg" alt="路线任务图">
+                </div>
+
+                <div class="task-content">
+                    <div class="task-tag">任务三：路线描述</div>
+                    <h3>还原漕运路线</h3>
+                    <p>根据路线图，选择正确的顺序表达。</p>
+
+                    <div class="question-box">
+                        <p class="question">下面哪一句路线描述更合适？</p>
+
+                        <label><input type="radio" name="q3" value="a"> A. 先到临清，再沿运河南下，最后到光岳楼附近。</label>
+                        <label><input type="radio" name="q3" value="b"> B. 先到码头，再去临清，最后去北门。</label>
+                        <label><input type="radio" name="q3" value="c"> C. 先去茶馆，再去山陕会馆，不需要看地图。</label>
+                    </div>
+
+                    <button class="check-btn" data-task="3">提交答案</button>
+                    <p class="result-text" id="result3"></p>
+                </div>
+            </div>
+
+            <!-- 任务四 -->
+            <div class="task-card reverse-card">
+                <div class="task-img">
+                    <img src="./images/learn/task_dialogue_teahouse.jpg" alt="对话任务图">
+                </div>
+
+                <div class="task-content">
+                    <div class="task-tag">任务四：情境对话</div>
+                    <h3>茶馆问路</h3>
+                    <p>你来到茶馆询问掌柜线索，请选择合适的表达。</p>
+
+                    <div class="question-box">
+                        <p class="question">如果你想问“山陕会馆怎么走？”，下面哪一句最合适？</p>
+
+                        <label><input type="radio" name="q4" value="a"> A. 请问，山陕会馆怎么走？</label>
+                        <label><input type="radio" name="q4" value="b"> B. 山陕会馆很好吃吗？</label>
+                        <label><input type="radio" name="q4" value="c"> C. 我比山陕会馆多三百石。</label>
+                    </div>
+
+                    <button class="check-btn" data-task="4">提交答案</button>
+                    <p class="result-text" id="result4"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 完成总结 -->
+<div class="section finish-section">
+    <div class="container finish-box">
+        <div>
+            <h2>任务总结</h2>
+            <p id="finishText">
+                你需要完成四个汉语任务，才能解锁最终体验入口。
+            </p>
+        </div>
+
+        <div class="stamp-box" id="stampBox">
+            <span>未完成</span>
+        </div>
+    </div>
+</div>
+
+<!-- 底部跳转 -->
+<div class="learn-next">
+    <div class="container">
+        <h2>完成语言任务后，即可进入预约体验。</h2>
+        <a href="clues.html" class="next-line">返回运河线索</a>
+        <a href="booking.html" id="bookBtn" class="disabled">进入预约体验</a>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<div class="footer">
+    <p>《聊城拾遗：千里漕影》Web课程设计作品</p>
+    <p>3班 2024405943 卢昱萱</p>
+</div>
+
+<script src="./js/learn.js"></script>
+<script src="./js/music.js"></script>
+</body>
+</html>
